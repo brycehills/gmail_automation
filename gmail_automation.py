@@ -6,10 +6,9 @@ from email.utils import make_msgid
 import mimetypes
 
 # Define email sender
-email_sender = 'abc@gmail.com' # email name 
+email_sender = '@gmail.com' # email name 
 email_password = 'xxxxxxxx' #sender email password -- do not make public to repo
 msg = EmailMessage()
-
 
 # set the plain text body
 msg.set_content('')
@@ -26,15 +25,15 @@ msg.add_alternative("""\
         <p>
 To Whom it May Concern,<br>
 <br>
-Authors Jarrod Shusterman & Sofía Lapuente here—we hope this message finds you well! :) We’re reaching out because our mission is to get kids reading, <br>
+Authors Jarrod Shusterman & Sofía Lapuente here—we hope this message finds you well! :) We’re reaching out because our mission is to get kids reading,
 and we're doing a virtual tour and wanted to know if your school or your district would be interested in a virtual motivational author visit! <br>
 <br>
 (If you're the wrong person to talk to, if you would be so kind to forward this to the English Department or librarian that would be greatly appreciated)<br>
 <br>
-As New York Times bestselling authors and UCLA professors of creative writing, connecting with teens through YA literature is our passion! My novel DRY, <br>
+As New York Times bestselling authors and UCLA professors of creative writing, connecting with teens through YA literature is our passion! My novel DRY,
 made many award lists, which I co-wrote with Author Neal Shusterman (Unwind & Scythe series).<br>
 <br>
-We have no speaking fee--we just ask for a minimum order of 35 books of our upcoming Simon & Schuster title, RETRO, for your students or library. <br>
+We have no speaking fee--we just ask for a minimum order of 35 books of our upcoming Simon & Schuster title, RETRO, for your students or library.
 (digital samples of book available for serious inquiries) Although it’s a fun YA  thriller, RETRO handles important issues like cyberbullying <br>
 and responsible technology usage, which is why we want to make sure we can get it in the hands of as many teens as possible!<br>
 <br>
@@ -67,22 +66,30 @@ with open('poster.jpeg', 'rb') as img:
                                          subtype=subtype, 
                                          cid=image_cid)
 
-with open('names.txt') as f:
-    recipient_list = f.readlines()
+recipient_list = open("names.txt").read().splitlines()
 
 for i in range(len(recipient_list)):
     # Set the subject and body of the email
     subject = 'Author Visit'
-    
-
     msg['From'] = email_sender
     msg['To'] = recipient_list[i]
     msg['Subject'] = subject
 
-    # Add SSL
+    # Add SSL --  Log in and send the email
     context = ssl.create_default_context()
-
-    # Log in and send the email
     with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, recipient_list[i], msg.as_string())
+
+    #avoid multiple headers error
+    del msg['To']
+    del msg['From']
+    del msg['Subject']
+
+
+
+
+
+
+
+
