@@ -51,7 +51,7 @@
 
 
 ## Help
-* note: if you want an image at the foot of the email, change the poster.jpeg to required photo
+* note: if you want an image at the foot of the email, change the poster.jpeg to desired image and resize as needed
 * otherwise -> comment out the following line: 
 ```html
  <img src="cid:{image_cid}", width = "450", height = "750">
