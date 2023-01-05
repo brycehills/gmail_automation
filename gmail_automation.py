@@ -20,6 +20,7 @@ msg.add_alternative("""\
 <html>
     <body>
         <p>
+        example email body message here
         </p>
         <img src="cid:{image_cid}", width = "450", height = "750">
     </body>
@@ -44,7 +45,7 @@ recipient_list = open("names.txt").read().splitlines()
 #loop over emails grabbed from names.txt
 for i in range(len(recipient_list)):
     # Set the subject and body of the email
-    subject = 'Author Visit'
+    subject = 'Example Subject'
     msg['From'] = email_sender
     msg['To'] = recipient_list[i]
     msg['Subject'] = subject
