@@ -11,7 +11,17 @@
 
 ### Required Steps: 
 * make changes to the username and password as desbribed under depedencies
-* edit the html to change the body of the message --> (msg.add_alternative("""\)  <-- variable name
+* edit the html to change the body of the message 
+```html
+ msg.add_alternative("""\
+<html>
+    <body>
+        <p>
+        example email body message here
+        </p>
+        <img src="cid:{image_cid}", width = "450", height = "750">
+    </body>
+```
 * if wanted, add/edit/delete the poster.jpeg to add a custom photo to the email
 * edit the names.txt file to specify who to send the email to
 
