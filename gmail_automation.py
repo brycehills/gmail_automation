@@ -5,8 +5,8 @@ from email.utils import make_msgid
 import mimetypes
 
 # Define email sender
-email_sender = '@gmail.com' # email name 
-email_password = 'xxxxxxxx' #sender email password -- do not make public to repo
+email_sender = 'yourname123@gmail.com' # email name 
+email_password = '16digitcode' #sender email password -- do not make public to repo
 msg = EmailMessage() # emailmsg object
 
 # set the plain text body
