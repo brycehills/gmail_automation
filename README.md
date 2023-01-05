@@ -1,7 +1,7 @@
 # Mass Email Sender - Gmail
 
 * Allows a user to automate the sending of many emails to a customizable list of recipients. 
-* Initially created for a friend who initally had to send thousands of individual emails by hand. 
+* Initially created for a friend who needed to send thousands of individual emails manually.
 
 ## Description
 
