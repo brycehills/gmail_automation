@@ -1,10 +1,12 @@
 # Mass Email Sender - Gmail
 
-Allows a user to automate the sending of many emails to a customizable list of recipients. 
+Allows a user to automate the sending of many emails to a customizable list of recipients. Initially created for a friend who initally had to send thousands of indidual emails by hand. 
 
 ## Description
 
 * gmail_automate.py - script which loops through a user defined list of email addresses and sends an email, which can be edited as needed by the user. 
+* names.txt - user defined list of email addresses to be email recipients.
+* poster.jpeg - poster that can be included at foot of email
 * additonally, the option to add an resizeable image to the email is also avaiable.
 
 ### Required Steps: 
@@ -39,5 +41,6 @@ Allows a user to automate the sending of many emails to a customizable list of r
 
 
 ## Help
-
+* note: if you want an image at the foot of the email, change the poster.jpeg to required photo
+* note: Gmail will limit 500 emails per day per account 
 * if you have previusly installed python 2, you may need to use the python3 command. 
