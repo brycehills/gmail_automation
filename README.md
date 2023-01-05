@@ -35,7 +35,7 @@
     * Under account find security settings
     * Enable 2 step auth (will prompt to log in)
     * enter phone number and enter code via text mesaage
-    * after completed, you should be prompted that 2fa is enabled.
+    * you should be prompted that 2fa is enabled.
 * 2
     * go to myaccount.google.com/apppasswords
     * on drop-down menu select "other" -> type 'python' & hit generate
