@@ -30,7 +30,7 @@
 ### Dependencies
 
 * must have python 3 installed on machine
-* additionally, user must have a google account with 2 factor authtification turned on to generate an access code by the following steps:
+* additionally, user must have a google account with 2 step auth turned on to generate an access code via the following steps:
 * 1
     * Under account find security settings
     * Enable 2 step auth (will prompt to log in)
