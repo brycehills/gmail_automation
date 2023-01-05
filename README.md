@@ -10,7 +10,7 @@
 * poster.jpeg - resizeable image that can be included at foot of email
 
 ### Required Steps: 
-* make changes to the username and password as desbribed under depedencies
+* make changes to the username and password as described under depedencies
 * edit the html to change the body of the message 
 ```html
  msg.add_alternative("""\
